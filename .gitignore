@@ -1,0 +1,10 @@
+# IDEA project files
+*.iml
+
+# Terraform runtime folder and state files
+.terraform
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
+/terraform/modules/modules.json
+/terraform/external-modules/
