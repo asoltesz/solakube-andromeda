@@ -22,6 +22,10 @@ ansible_vault_password_path = "~/.solakube/ansible-vault-pass"
 # The definition of teh virtual machines forming the Kubernetes nodes
 # (see variables.tf for detailed docs)
 #
+# cx21  - 2 vCPU |  4 GB RAM |  40 GB SSD |  4.9 EUR
+# cx31  - 2 vCPU |  8 GB RAM |  40 GB SSD |  8.9 EUR
+# cpx31 - 4 vCPU |  8 GB RAM | 160 GB SSD | 12.4 EUR
+#
 servers = {
 
   1 = {
