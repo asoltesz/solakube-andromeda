@@ -15,10 +15,30 @@ whitelisted_ips:
     # internet you use for administrating other machines
     - "85.25.235.187/32"
 
+#
+# Services/ports that should be allowed on the firewall to the public
+# (port identified with a service name)
+#
 open_services:
     - ssh
     - http
     - https
+
+#
+# Ports that should be allowed on the firewall to the public
+#
+open_ports:
+    # Mailu Email services ports (comment them out if Mailu will not be installed)
+    - "25/tcp"    # smtp
+    - "587/tcp"   # smtpd
+    - "465/tcp"   # smtps
+    - "993/tcp"   # imaps
+    - "143/tcp"   # imap
+    - "995/tcp"   # pop3s
+    - "110/tcp"   # pop3
+    # / Mailu Email services ports
+
+
 
 # -------------------------------
 # Admin email notifications
