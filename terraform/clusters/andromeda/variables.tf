@@ -232,14 +232,18 @@ variable "user_data_scripts" {
   default =  {
 
     //
-    // Generic Cloud Init script for CentOS 7 VMs
+    // Cloud Init script for CentOS 7 VMs with a data partition.
     //
-    // 15 GB is reserved for the OS and Docker images, all the rest goes to
-    // the Rook/Ceph storage cluster in the form of the /dev/sda2 partition.
+    // 15 GB is reserved for the OS, Kubernetes and Docker images,
+    // all the rest goes to the sda2 partition.
     //
-    // sda2 is left without a filesystem because Ceph doesn't accept
-    // if there was an fs on it
-    centos7_generic = <<EOF
+    // This partition can be used by Rook/Ceph or OpenEBS for provisioning
+    // persistent volumes
+    //
+    // sda2 is left without a filesystem because the provisioners will format
+    // it as they see fit.
+    //
+    centos7_generic_sda2_data = <<EOF
 #cloud-config
 
 growpart:

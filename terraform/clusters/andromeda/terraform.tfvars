@@ -35,7 +35,7 @@ servers = {
     image              = "centos-7"
     location           = "nbg1"
     backups            = false
-    user_data_script   = "centos7_generic"
+    // user_data_script   = "centos7_generic_sda2_data"
     roles              = "--worker --etcd --controlplane"
   },
 
@@ -46,7 +46,7 @@ servers = {
     image              = "centos-7"
     location           = "nbg1"
     backups            = false
-    user_data_script   = "centos7_generic"
+    // user_data_script   = "centos7_generic_sda2_data"
     roles              = "--worker --etcd --controlplane"
   },
 
@@ -57,7 +57,7 @@ servers = {
     image              = "centos-7"
     location           = "nbg1"
     backups            = false
-    user_data_script   = "centos7_generic"
+    // user_data_script   = "centos7_generic_sda2_data"
     roles              = "--worker --etcd --controlplane"
   },
 }
