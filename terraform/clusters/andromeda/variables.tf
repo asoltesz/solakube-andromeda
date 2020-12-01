@@ -171,7 +171,7 @@ variable "servers" {
 # It must be one of the supported versions of your Rancher/RKE server
 #
 variable "kubernetes_version" {
-  default = "v1.19.3-rancher1"
+  default = "v1.19.4-rancher1-1"
 }
 
 #
