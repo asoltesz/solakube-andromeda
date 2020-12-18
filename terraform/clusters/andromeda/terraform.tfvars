@@ -26,6 +26,9 @@ ansible_vault_password_path = "~/.solakube/ansible-vault-pass"
 # cx31  - 2 vCPU |  8 GB RAM |  40 GB SSD |  8.9 EUR
 # cpx31 - 4 vCPU |  8 GB RAM | 160 GB SSD | 12.4 EUR
 #
+# When a Ceph-disk variant is needed, postfix the machine type with "-ceph"
+# For example: cx41-ceph
+#
 servers = {
 
   1 = {
