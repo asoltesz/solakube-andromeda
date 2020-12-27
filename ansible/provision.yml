@@ -17,8 +17,11 @@
         tags: fail2ban
       - role: ansible-hcloud-floating-ip-role
         tags: floating_ip
-      - role: ansible-firewalld-role
-        tags: firewalld
+# TODO: After the migration to Kubernetes 1.19 + Rancher 2.5, there are unresolved
+#       firewall conflicts, so FirewallD CANNOT be used until we find out which
+#       ports need to be handled differently
+#      - role: ansible-firewalld-role
+#        tags: firewalld
       - role: ansible-docker-role
         tags: docker
 #      - role: ansible-kernelcare-role
