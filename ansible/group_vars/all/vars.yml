@@ -13,7 +13,7 @@ whitelisted_ips:
     # Your IP from which you would like to access the cluster
     # Can be a home IP (if you have a fixed IP) or a server on the
     # internet you use for administrating other machines
-    - "85.25.235.187/32"
+    # - "1.1.1.1/32"
 
 #
 # Services/ports that should be allowed on the firewall to the public
@@ -28,15 +28,15 @@ open_services:
 # Ports that should be allowed on the firewall to the public
 #
 open_ports:
-    # Mailu Email services ports (comment them out if Mailu will not be installed)
-    - "25/tcp"    # smtp
-    - "587/tcp"   # smtpd
-    - "465/tcp"   # smtps
-    - "993/tcp"   # imaps
-    - "143/tcp"   # imap
-    - "995/tcp"   # pop3s
-    - "110/tcp"   # pop3
-    # / Mailu Email services ports
+#    # begin: Mailu Email services ports (comment them out if Mailu will not be installed)
+#    - "25/tcp"    # smtp
+#    - "587/tcp"   # smtpd
+#    - "465/tcp"   # smtps
+#    - "993/tcp"   # imaps
+#    - "143/tcp"   # imap
+#    - "995/tcp"   # pop3s
+#    - "110/tcp"   # pop3
+#    # end: Mailu Email services ports
 
 
 
@@ -44,8 +44,8 @@ open_ports:
 # Admin email notifications
 # -------------------------------
 
-admin_email: andromeda-k8s-cluster@nostran.com
-notifications_email: soltesz.andras@gmail.com
+admin_email: admin@example.com
+notifications_email: admin@example.com
 
 
 # -------------------------------
@@ -56,11 +56,11 @@ notifications_email: soltesz.andras@gmail.com
 #    - name: ssh
 
 # Fail2ban
-fail2ban_sender: andromeda-k8s-cluster@nostran.com
+fail2ban_sender: andromeda-k8s-cluster@example.com
 
 fail2ban_ignoreips:
     # See whitelisted IPs
-    - 85.25.235.187
+    # - 1.1.1.1
 
-fail2ban_destemail: soltesz.andras@gmail.com
+fail2ban_destemail: admin@example.com
 

@@ -5,7 +5,7 @@ ssh_private_key = "~/.ssh/id_rsa"
 ssh_public_key  = "~/.ssh/id_rsa.pub"
 
 # Rancher configuration
-rancher_api_url     = "https://rancher.nostran.com/v3"
+rancher_api_url     = "https://rancher.example.com/v3"
 
 etcd_backup_enabled = false
 
@@ -34,7 +34,7 @@ servers = {
   1 = {
     name               = "andromeda-master-1"
     private_ip_address = "10.0.0.3"
-    server_type        = "cx31"
+    server_type        = "cx21"
     image              = "centos-7"
     location           = "nbg1"
     backups            = false
@@ -45,10 +45,11 @@ servers = {
   2 = {
     name               = "andromeda-master-2"
     private_ip_address = "10.0.0.4"
-    server_type        = "cx31"
+    server_type        = "cx21"
     image              = "centos-7"
     location           = "nbg1"
     backups            = false
+    user_data_script   = ""
     // user_data_script   = "centos7_generic_sda2_data"
     roles              = "--worker --etcd --controlplane"
   },
@@ -56,10 +57,11 @@ servers = {
   3 = {
     name               = "andromeda-master-3"
     private_ip_address = "10.0.0.5"
-    server_type        = "cx31"
+    server_type        = "cx21"
     image              = "centos-7"
     location           = "nbg1"
     backups            = false
+    user_data_script   = ""
     // user_data_script   = "centos7_generic_sda2_data"
     roles              = "--worker --etcd --controlplane"
   },

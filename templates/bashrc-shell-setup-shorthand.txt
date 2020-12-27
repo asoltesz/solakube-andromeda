@@ -1,0 +1,29 @@
+#
+# A shorthand command to setup a Bash shell for running SolaKube commands
+# with the Andromeda cloud
+#
+# Place it in your ~/.bashrc
+#
+
+
+# ------------------------------------------------------------------------------
+# Shell configuration for the Andromeda cluster building project
+# ------------------------------------------------------------------------------
+anc() {
+
+    export SK_HOME=/path/to/where/solakube/is/checked/out
+
+    export SK_PROJECT_HOME=/path/to/where/andromeda/checked/out
+
+    cd "${SK_PROJECT_HOME}"
+
+    export SK_CLUSTER="andromeda"
+
+    alias sk=${SK_HOME}/scripts/sk
+
+    ${SK_HOME}/scripts/sk-info.sh
+
+    echo
+    echo "Your shell is now configured for the SolaKube/${SK_CLUSTER} project."
+    echo
+}
